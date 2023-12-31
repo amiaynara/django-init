@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <!-- below is an example of jinja-->
+      <h1>User {{name}}</h1>
+      <h3>Friends</h3>
+      {% for friend in friends_list %}
+        <li><a href="https://www.google.com/search?q={{friend}}">{{friend}}</a></li>
+      {% endfor %}
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="cards">
+      <div class="card">
+        <h2>Welcome!</h2>
+        <p>You are logged in.</p>
+      </div>
+      <!-- Other dashboard cards or sections can be added here -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 User Dashboard</p>
+  </footer>
+</body>
+</html>
